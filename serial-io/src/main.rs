@@ -22,7 +22,7 @@ fn main() {
         Ok(())
     }).unwrap();
 
-    port.set_timeout(Duration::from_millis(1000)).unwrap();
+    port.set_timeout(Duration::from_millis(10000)).unwrap();
 
     
     loop {
