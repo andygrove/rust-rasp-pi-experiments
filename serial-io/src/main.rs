@@ -11,7 +11,7 @@ use serial::prelude::*;
 fn main() {
     println!("Connecting...");
 
-    let mut port = serial::open("/dev/ttyS0").unwrap();
+    let mut port = serial::open("/dev/ttyUSB0").unwrap();
 
     port.reconfigure(&|settings| {
         settings.set_baud_rate(serial::Baud57600).unwrap();
@@ -35,4 +35,11 @@ fn main() {
         }
 
     }   
+
+/*
+$GPGLL,3956.4210,N,10504.9321,W,132909.800,A,D*41
+$GPGLL,3956.4210,N,10504.9320,W,132910.400,A,D*44
+$GPGLL,3956.4210,N,10504.9320,W,132910.600,A,D*46
+$GPGLL,3956.4210,N,10504.9320,W,132910.800,A,D*48
+*/
 }
